@@ -1,38 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Open+Sans&display=swap');
+
+body {
+	margin: 0;
+	font-family: 'Open Sans', 'Segoe UI', 'Roboto', 'Oxygen',
+	'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+	sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* For Firefox */
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+/* Webkit browsers like Safari and Chrome */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+button {
+	cursor: pointer;
+}
+
 .App {
-  text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	min-height: 80px;
+	margin: 12% 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.countdownForm {
+	flex-direction: row;
+	display: flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.countdownInput {
+	margin: 0 0 0 1em;
+	width: 5em;
+	height: 22px;
+	text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.countdownButton {
+	font-family: 'Nunito', 'Open Sans', sans-serif;
+	margin: 0 0 0 1em;
+	padding: 0 1.2em 0 1.2em;
+	background-color:#39dfb7;
+	color: white;
+	border-radius: 0;
+	font-weight: bold;
+	border: none;
+	font-size: 12px;
 }
 
-.App-link {
-  color: #61dafb;
+.Timer {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.timerText {
+	align-self: center;
+	margin: 2em 0 -1em 0;
+}
+
+.timerAndPlayback {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 1em 0em 1em 2em;
+}
+
+.timerAndPlayback span {
+	cursor: pointer;
+}
+
+.playbackButton {
+	padding: 0 0 0 0;
+	font-size: 2em;
+}
+
+.SpeedControls {
+	display: flex;
+	flex-direction: row;
+	flex: 9;
+}
+
+.blink {
+	-webkit-animation: blink .75s linear infinite;
+	-moz-animation: blink .75s linear infinite;
+	-ms-animation: blink .75s linear infinite;
+	-o-animation: blink .75s linear infinite;
+	 animation: blink .75s linear infinite;
+}
+@-webkit-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-moz-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-ms-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-o-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
 }
